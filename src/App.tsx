@@ -19,7 +19,7 @@ function App() {
 }
 
 const apiCall = async () => {
-  let res = await fetch("http://api.weatherapi.com/v1/current.json?key=333fc7460b094d599cb182609222602&q=mumbai")
+  let res = await fetch("https://api.weatherapi.com/v1/current.json?key=333fc7460b094d599cb182609222602&q=mumbai")
   let data = await res.json();
   console.log(data);
 }
