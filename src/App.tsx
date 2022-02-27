@@ -10,17 +10,18 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={apiCall}>
+          Api Call
+        </button>
       </header>
     </div>
   );
+}
+
+const apiCall = async () => {
+  let res = await fetch("http://api.weatherapi.com/v1/current.json?key=333fc7460b094d599cb182609222602&q=mumbai")
+  let data = await res.json();
+  console.log(data);
 }
 
 export default App;
